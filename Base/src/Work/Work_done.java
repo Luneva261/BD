@@ -73,6 +73,17 @@ public class Work_done implements Serializable{
     public void setKodW(String kodW) {
         this.kodW = kodW;
     }
+
+    public Work_done() {
+    }
+
+    public Work_done(long id, String kodM, String kodK, int kodD, String kodW) {
+        this.id = id;
+        this.kodM = kodM;
+        this.kodK = kodK;
+        this.kodD = kodD;
+        this.kodW = kodW;
+    }
     
     
 

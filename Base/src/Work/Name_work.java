@@ -16,16 +16,16 @@ import javax.persistence.Table;
  * @author windows
  */
 @Entity
-@Table (name="Название работы")
+@Table (name="NameWork")
 public class Name_work implements Serializable{
-    
+    private static final long serialVersionUID = 1L;
     @Id @GeneratedValue
         private long id;
     
-    @Column (name="Код работы")
+    @Column (name="KodWork")
     private String kod;
     
-    @Column (name="Название работы")
+    @Column (name="NameW")
     private String nameW;
 
     public long getId() {
@@ -51,6 +51,19 @@ public class Name_work implements Serializable{
     public void setNameW(String nameW) {
         this.nameW = nameW;
     }
-   
+    @Override
+        public String toString() {
+            return String.format("(%d, %s, %s)", this.id, this.kod, this.nameW);
+        }
+
+    public Name_work() {
+    }
+
+    public Name_work(long id, String kod, String nameW) {
+        this.id = id;
+        this.kod = kod;
+        this.nameW = nameW;
+    }
+        
 
 }

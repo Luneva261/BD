@@ -62,6 +62,16 @@ public class Detail implements Serializable{
     public void setCost(double cost) {
         this.cost = cost;
     }
+
+    public Detail() {
+    }
+
+    public Detail(long id, int kod, String name, double cost) {
+        this.id = id;
+        this.kod = kod;
+        this.name = name;
+        this.cost = cost;
+    }
     
     
     

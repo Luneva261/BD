@@ -84,6 +84,18 @@ public class Worker  implements Serializable{
     public void setPost(String post) {
         this.post = post;
     }
+
+    public Worker() {
+    }
+
+    public Worker(long id, String kod, String last_name, String name, String experience, String post) {
+        this.id = id;
+        this.kod = kod;
+        this.last_name = last_name;
+        this.name = name;
+        this.experience = experience;
+        this.post = post;
+    }
     
     
 }

@@ -18,28 +18,28 @@ import javax.persistence.Table;
  * @author windows
  */
 @Entity
-@Table(name="База клиентов")
+@Table(name="BaseClient")
 public class Customer_base implements Serializable {
-    
+     private static final long serialVersionUID = 1L;
     @Id @GeneratedValue
         private long id;
 
-    @Column (name="Код клиента")
+    @Column (name="Kod")
     private String kod;
     
-    @Column (name="Фамилия Клиента")
+    @Column (name="Family")
     private String last_name;
     
-    @Column (name="Имя")
+    @Column (name="Name")
     private String name;
     
-    @Column (name="Пол")
+    @Column (name="Sex")
     private String sex;
     
-    @Column (name="Телефон")
+    @Column (name="Number")
     private int number;
     
-    @Column (name="Поломка")
+    @Column (name="Problem")
     private String breakage;
     
     public Customer_base () {};
@@ -89,6 +89,16 @@ public class Customer_base implements Serializable {
     }
 
     public void setBreakage(String breakage) {
+        this.breakage = breakage;
+    }
+
+    public Customer_base(long id, String kod, String last_name, String name, String sex, int number, String breakage) {
+        this.id = id;
+        this.kod = kod;
+        this.last_name = last_name;
+        this.name = name;
+        this.sex = sex;
+        this.number = number;
         this.breakage = breakage;
     }
     
